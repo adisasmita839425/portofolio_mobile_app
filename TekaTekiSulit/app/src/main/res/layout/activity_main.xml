@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="50dp">
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/permainan_baru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Permainan Baru"
+                    android:textSize="25dp"
+                    android:fontFamily="casual"
+                    android:gravity="center"/>
+                <Button
+                    android:id="@+id/lanjutkan_bermain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lanjutkan"
+                    android:textSize="25dp"
+                    android:fontFamily="casual"
+                    android:gravity="center"/>
+                <Button
+                    android:id="@+id/peraturan_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Peraturan"
+                    android:textSize="25dp"
+                    android:fontFamily="casual"
+                    android:gravity="center"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Keluar"
+                    android:textSize="25dp"
+                    android:fontFamily="casual"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintsatu"
+        android:layout_centerHorizontal="true"
+        android:layout_width="1200px"
+        android:layout_height="900px"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="150px"
+        android:background="@color/teal_700"
+        android:padding="5dp"
+        android:backgroundTint="@color/black">
+        <RelativeLayout
+            android:padding="40dp"
+            android:background="@color/teal_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/constraintsatu"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/textviewsatu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kamu belum pernah bermain sama sekali, ayo main baru"
+                android:textSize="30dp"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/permain_barujuga"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permainan baru"
+                android:layout_alignParentBottom="true"
+                />
+            <Button
+                android:id="@+id/batal_bermain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batal"
+                android:layout_toRightOf="@+id/permain_barujuga"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
